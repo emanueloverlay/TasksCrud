@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "b39accc7-d5ce-4b94-863a-f142a42a7e76",
+		"name": "TasksCrud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33661644"
+	},
+	"item": [
+		{
+			"name": "getAllTasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/taskscrud/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"taskscrud",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTaskById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/taskscrud/tasks/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"taskscrud",
+						"tasks",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NewTask",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "description",
+							"value": "NuevaTarea",
+							"description": "Descripción tarea",
+							"type": "text"
+						},
+						{
+							"key": "dateHour",
+							"value": "2024-06-30 12:00:00",
+							"description": "Día y Hora",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "Pendiente",
+							"description": "Estado (Pendiente, En proceso, Completado)",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/taskscrud/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"taskscrud",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateTask",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"TareaModificada\",\r\n    \"dateHour\": \"2024-01-01 10:00:00\",\r\n    \"status\": \"Completado\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/taskscrud/tasks/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"taskscrud",
+						"tasks",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteTask",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/taskscrud/tasks/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"taskscrud",
+						"tasks",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
